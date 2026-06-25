@@ -12,18 +12,24 @@
 
 ## 安装
 
-### 方法一：npx 一键安装（推荐）
+### 方法一：git clone 到 Claude Code 目录（Claude Code 推荐）
+
+```bash
+git clone https://github.com/taoxee/renxinghua.git ~/.claude/skills/renxinghua
+```
+
+Claude Code 的个人技能读的是 `~/.claude/skills/`，直接 clone 到这里最稳。
+
+### 方法二：npx 一键安装（跨 agent 通用）
 
 ```bash
 npx skills add https://github.com/taoxee/renxinghua.git
 ```
 
-最省事的方式，会自动把技能装到正确的目录。
-
-### 方法二：git clone
+省事，但它是**跨 agent 的通用安装器**，默认装到 `~/.agents/skills/renxinghua/`，不是 Claude Code 的技能目录。如果装完后 Claude Code 的 `/skills` 里看不到，把它复制（或软链）到 `~/.claude/skills/` 即可：
 
 ```bash
-git clone https://github.com/taoxee/renxinghua.git ~/.claude/skills/renxinghua
+cp -r ~/.agents/skills/renxinghua ~/.claude/skills/renxinghua
 ```
 
 ### 方法三：手动安装
@@ -44,7 +50,7 @@ git clone https://github.com/taoxee/renxinghua.git ~/.claude/skills/renxinghua
 
 重启或重新加载 skills 后，在对话里说一句需要去 AI 味的请求即可触发。
 
-> 技能的 `name` 用的是中文「人性化」。部分 Claude Code 版本对中文斜杠命令支持不稳定，所以这个技能主要靠**描述里的触发词按意图激活**——你不需要敲 `/人性化`，直接说"帮我把这段去掉 AI 味"就行。
+> 技能的 `name` 用的是 ASCII 的 `renxinghua`（为了兼容安装器和各类工具链，中文 `name` 会导致安装目录变成 `unnamed-skill`）。「人性化」的品牌保留在标题和描述里。触发靠**描述里的中文触发词按语义激活**——你不用敲斜杠命令，直接说"帮我把这段去掉 AI 味"就行。
 
 ## 用法
 
