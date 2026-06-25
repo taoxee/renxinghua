@@ -12,13 +12,21 @@
 
 ## 安装
 
-### 方法一：git clone（推荐）
+### 方法一：npx 一键安装（推荐）
+
+```bash
+npx skills add https://github.com/taoxee/renxinghua.git
+```
+
+最省事的方式，会自动把技能装到正确的目录。
+
+### 方法二：git clone
 
 ```bash
 git clone https://github.com/taoxee/renxinghua.git ~/.claude/skills/renxinghua
 ```
 
-### 方法二：手动安装
+### 方法三：手动安装
 
 1. 下载本仓库的 ZIP 或克隆到本地
 2. 把整个文件夹复制到 Claude Code 的 skills 目录：
