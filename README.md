@@ -43,7 +43,9 @@ cp -r ~/.agents/skills/renxinghua ~/.claude/skills/renxinghua
    ```
    ~/.claude/skills/renxinghua/
    ├── SKILL.md
-   └── README.md
+   ├── README.md
+   └── references/
+       └── style-cards.md
    ```
 
 ### 验证
@@ -87,6 +89,8 @@ cp -r ~/.agents/skills/renxinghua ~/.claude/skills/renxinghua
 
 - 事实不变：不新增数字、来源、经历和承诺，不丢信息，不把"大约"改成确定。
 - 缺内容就问：套话删完所剩无几时，问你一到三个问题，或列出建议补充的信息。
+- 先理结构再改句子：同一件事只说一次，讲完就停。
+- 可选笔法：觉得改完仍别扭时，可以指定白描、克制或口语。
 - 看场景：论文和公告只删套话；周报结论先行；客服回复讲进展和下一步；朋友圈和公众号可以口语化、保留情绪。
 - 跟着样本走：给一两段你自己写的东西，句长、用词和标点向它靠拢。
 - 该放手就放手：本来就自然的文字原样返回。
@@ -129,7 +133,7 @@ cp -r ~/.agents/skills/renxinghua ~/.claude/skills/renxinghua
 
 ## 它能识别的 AI 写作痕迹
 
-技能里整理了 **31 种**中文 AI 写作痕迹，分六类：
+技能里整理了 **33 种**中文 AI 写作痕迹，分七类：
 
 **内容（1–6）**：拔高意义/遗产/趋势、过度强调知名度、句尾拖尾升华、宣传广告腔、模糊归因、八股式"挑战与展望"。
 
@@ -145,6 +149,8 @@ cp -r ~/.agents/skills/renxinghua ~/.claude/skills/renxinghua
 
 **聊天模型口癖（28–31）**："接住你"式共情、表态式开场、工程黑话外溢、故作深刻与自问自答。
 
+**结构（32–33）**：金句收尾、同一件事讲几遍。
+
 完整的"前 → 后"对比示例、场景分级和交付前检查清单，都在 [`SKILL.md`](./SKILL.md) 里。
 
 ## 核心理念
@@ -155,7 +161,7 @@ cp -r ~/.agents/skills/renxinghua ~/.claude/skills/renxinghua
 
 ## 致谢
 
-模式框架脱胎自维基百科 [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) 与 [blader/humanizer](https://github.com/blader/humanizer)，中文版概念参考了 [op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh)，并针对中文做了重写。
+模式框架脱胎自维基百科 [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) 与 [blader/humanizer](https://github.com/blader/humanizer)，中文版概念参考了 [op7418/Humanizer-zh](https://github.com/op7418/Humanizer-zh)，并针对中文做了重写。结构改写与可选笔法参考了 [Tao716/human-writing-skill](https://github.com/Tao716/human-writing-skill) 和 [EtherealX2/xiezuo](https://github.com/EtherealX2/xiezuo)。
 
 ## 许可
 
